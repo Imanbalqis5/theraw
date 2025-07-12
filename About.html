@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -6,7 +6,6 @@
   <title>The Raw Skincare</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&family=Fredoka:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
   <style>
     body {
       margin: 0;
@@ -15,15 +14,6 @@
       color: #333;
     }
 
-   <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #ffeef5;
-      color: #333;
-    }
-
-    /* Header */
     header {
       background-color: #ffd9e6;
       padding: 20px 50px;
@@ -37,6 +27,8 @@
     .logo a {
       color: #000;
       text-decoration: none;
+      font-size: 24px;
+      font-weight: bold;
     }
 
     .main-nav {
@@ -86,11 +78,7 @@
     .header-icons {
       display: flex;
       gap: 20px;
-    }
-
-    .header-icons {
-      display: flex;
-      gap: 20px;
+      align-items: center;
     }
 
     .header-icons a {
@@ -98,7 +86,30 @@
       font-size: 18px;
       text-decoration: none;
     }
-    
+
+    .search-box {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-box input {
+      padding: 5px 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-right: 5px;
+      font-family: 'Fredoka', sans-serif;
+    }
+
+    .search-box button {
+      background-color: #ffb2cc;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: 'Fredoka', sans-serif;
+      color: #fff;
+    }
+
     .page-title {
       text-align: center;
       margin: 30px 0 10px;
@@ -222,8 +233,6 @@
   </style>
 </head>
 <body>
-
-  <!-- HEADER -->
   <header>
     <div class="logo"><a href="index.html">The Raw.</a></div>
     <nav class="main-nav">
@@ -248,15 +257,16 @@
     </nav>
     <div class="header-icons">
       <a href="#"><i class="fas fa-user"></i></a>
-      <a href="#"><i class="fas fa-search"></i></a>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button onclick="searchProducts()"><i class="fas fa-search"></i></button>
+      </div>
       <a href="#"><i class="fas fa-shopping-bag"></i></a>
     </div>
   </header>
 
-  <!-- PAGE TITLE -->
   <h2 class="page-title">Our Story</h2>
 
-  <!-- THE BRAND SECTION -->
   <section class="brand-section">
     <img src="brand1.png" alt="The Brand Image">
     <div class="brand-caption">
@@ -265,7 +275,6 @@
     </div>
   </section>
 
-  <!-- OUR VALUES SECTION -->
   <section class="values-section">
     <div class="values-img">
       <img src="values1.jpg" alt="Lab and skincare values">
@@ -280,61 +289,51 @@
     </div>
   </section>
 
-  <!-- OUR TEAM MEMBERS SECTION -->
   <section class="team-section">
     <h2>Our Team Members</h2>
     <div class="team-slider" id="teamSlider">
       <div>
-        <img class="team-image" src="team1.jpg" alt="Team Member 1">
+        <img class="team-image" src="team1.JPG" alt="Team Member 1">
         <div class="team-caption">Ms. Iman Balqis | 2023167459</div>
       </div>
       <div>
-        <img class="team-image" src="team2.jpg" alt="Team Member 2">
+        <img class="team-image" src="team2.JPG" alt="Team Member 2">
         <div class="team-caption">Mr. Ahmad Azam | 2023159833</div>
       </div>
       <div>
-        <img class="team-image" src="team3.jpg" alt="Team Member 3">
+        <img class="team-image" src="team3.JPG" alt="Team Member 3">
         <div class="team-caption">Ms. Nur Azizah | 2023172631</div>
       </div>
       <div>
-        <img class="team-image" src="team4.jpg" alt="Team Member 4">
+        <img class="team-image" src="team4.JPG" alt="Team Member 4">
         <div class="team-caption">Ms. Siti Nurul Nasuha | 2023140583</div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div style="display: flex; flex-direction: column; align-items: center;">
       <div style="display: flex; gap: 30px; flex-wrap: wrap; justify-content: center;">
         <p><a href="tel:+60178764932">📞 Contact Us: +6017-8764932</a></p>
         <p><a href="about.html">👤 About Us</a></p>
       </div>
-      < <div class="social-icons" style="margin: 10px 0;">
-      <a href="https://www.instagram.com/theraw.skin?igsh=MW5lYWtkbmx5MXBpeA==" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.tiktok.com/@theraw.official?_t=ZS-8xy87hPNkL1&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
-    </div>
-      <p><strong>The raw. Proud Malaysian Brand.</strong></p>
+      <div class="social-icons" style="margin: 10px 0;">
+        <a href="https://www.instagram.com/theraw.skin" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@theraw.official" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
+      <p><strong>The Raw. Proud Malaysian Brand.</strong></p>
     </div>
   </footer>
 
-  <!-- DROPDOWN SCRIPT -->
   <script>
-    const shopLink = document.querySelector('nav div > a[href="#"]');
-    const dropdown = document.querySelector('.dropdown-menu');
-
-    shopLink.addEventListener('mouseover', () => {
-      dropdown.style.display = 'flex';
-    });
-    dropdown.addEventListener('mouseleave', () => {
-      dropdown.style.display = 'none';
-    });
-    shopLink.addEventListener('mouseleave', () => {
-      setTimeout(() => {
-        if (!dropdown.matches(':hover')) dropdown.style.display = 'none';
-      }, 200);
-    });
+    function searchProducts() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const items = document.querySelectorAll(".product-card");
+      items.forEach(item => {
+        const name = item.querySelector("h2").textContent.toLowerCase();
+        item.style.display = name.includes(input) ? "block" : "none";
+      });
+    }
   </script>
-
 </body>
 </html>

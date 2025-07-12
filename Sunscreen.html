@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Raw Skincare</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&family=Fredoka:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #ffeef5;
+      color: #333;
+    }
+
+   <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #ffeef5;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background-color: #ffd9e6;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Fredoka', sans-serif;
+      border-bottom: 2px solid #ffe6ee;
+    }
+
+    .logo a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .main-nav a {
+      color: #000;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 6px 10px;
+      position: relative;
+    }
+
+    .main-nav .dropdown {
+      position: relative;
+    }
+
+    .main-nav .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 35px;
+      left: 0;
+      background-color: #fff;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+      z-index: 1000;
+      border-radius: 8px;
+      min-width: 180px;
+      padding: 10px 0;
+    }
+
+    .main-nav .dropdown-content a {
+      display: block;
+      padding: 10px 20px;
+      color: #000;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .main-nav .dropdown:hover .dropdown-content,
+    .main-nav .dropdown:focus-within .dropdown-content {
+      display: block;
+    }
+
+    .header-icons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .header-icons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .header-icons a {
+      color: #000;
+      font-size: 18px;
+      text-decoration: none;
+    }
+    
+    /* Product Section */
+    .product-section {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      padding: 40px 20px;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .product-card {
+      align-items: flex-start;
+      width: calc(50% - 20px);
+      max-width: 600px;
+      padding-left: 100px;
+      padding-right: 100px;
+      box-sizing: border-box;
+      margin-bottom: 30px;
+      horizontal-align: center;
+    }
+
+    .product-img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      margin-right: 20px;
+      flex-shrink: 0;
+    }    
+
+    .product-details {
+      max-width: 400px;
+    }
+
+    .product-details h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: #c2185b;
+    }
+
+    .product-details p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      color: #558b2f;
+    }
+
+    .buy-btn {
+      padding: 10px 20px;
+      background-color: #e91e63;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .buy-btn:hover {
+      background-color: #c2185b;
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #ffd9e6;
+      text-align: center;
+      padding: 30px 10px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 10px 0;
+      font-family: 'Fredoka', sans-serif;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: #e91e63;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .icons {
+        margin-top: 10px;
+      }
+
+      .product-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .product-img {
+        width: 100%;
+        max-width: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+   <header>
+    <div class="logo"><a href="index.html">The Raw.</a></div>
+    <nav class="main-nav">
+      <div class="dropdown">
+        <a href="#">Shop</a>
+        <div class="dropdown-content">
+          <a href="All-products.html">All Products</a>
+          <a href="Cleanser.html">Cleanser</a>
+          <a href="Moisturiser.html">Moisturiser</a>
+          <a href="Serum.html">Serum</a>
+          <a href="Sunscreen.html">Sunscreen</a>
+          <a href="Acne-care.html">Acne Support Care</a>
+          <a href="Skincare-set.html">Skincare Set</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#">Featured</a>
+        <div class="dropdown-content">
+          <a href="Best-seller.html">Bestsellers</a>
+          <a href="Newarrivals.html">New Arrivals</a>
+        </div>
+      </div>
+    </nav>
+    <div class="header-icons">
+      <a href="#"><i class="fas fa-user"></i></a>
+      <a href="#"><i class="fas fa-search"></i></a>
+      <a href="#"><i class="fas fa-shopping-bag"></i></a>
+    </div>
+  </header>
+
+  <!-- Product Section -->
+  <section class="product-section">
+
+    <!-- Cera-Shield Physical Sunscreen -->
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="0">
+      <img src="sunscreen1.jpg" alt="Cera-Shield Physical Sunscreen" class="product-img">
+      <div class="product-details">
+        <h2>Cera-Shield Physical Sunscreen</h2>
+        <p>Unlock the pinnacle of sun protection with The Raw. Cera-Shield Physical Sunscreen. This advanced, broad-spectrum sunscreen is meticulously designed to shield your skin from the damaging effects of UVA and UVB rays. Suitable for both your face and body, it offers a comprehensive defense against the sun's harmful rays.</p>
+        <p class="price">RM45.00</p>
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Cera-Shield Hybrid Sunscreen -->
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+      <img src="sunscreen2.jpg" alt="Cera-Shield Hybrid Sunscreen" class="product-img">
+      <div class="product-details">
+        <h2>Cera-Shield Hybrid Sunscreen</h2>
+        <p>Introducing the cutting-edge synergy of physical and chemical sunscreens – The Raw. Cera-Shield Hybrid Sunscreen. This innovative formulation seamlessly combines reflective and absorptive properties to deliver broad-spectrum coverage against UVA and UVB rays with SPF 50. Enriched with five powerful combinations of ceramides, cholesterol, and fatty acids, this product not only protects but also strengthens the skin barrier.
+        </p>  
+        <p class="price">RM49.00</p>
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Aqua Cera-Tinted Sunscreen SPF 50+ PA++++ Broad Spectrum UVA / UVB (For Face & Body) -->
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="sunscreen3.jpg" alt="Aqua Cera-Tinted Sunscreen SPF 50+ PA++++ Broad Spectrum UVA / UVB (For Face & Body)" class="product-img">
+      <div class="product-details">
+        <h2>Aqua Cera-Tinted Sunscreen SPF 50+ PA++++ Broad Spectrum UVA / UVB (For Face & Body)</h2>
+        <p>With SPF 50+ PA++++, this sunscreen shields your skin from harmful UV rays and blue light while nourishing and enhancing its natural barrier. It has no white cast and offers a healthy matte finish with light coverage, evening out your skin tone for a natural look. Enjoy long-lasting protection without dullness or tightness, ensuring radiant and comfortable skin throughout the day. Uniquely blended with 5 anti-pollution ingredients, it is perfect for daily use and helps you achieve a natural, shine-free look all day while helping to protect against environmental damage.</p>
+        <p class="price">RM49.00</p>
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Cera-Shield Chemical Sunscreen -->
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="sunscreen4.jpg" alt="Cera-Shield Chemical Sunscreen" class="product-img">
+      <div class="product-details">
+        <h2>Cera-Shield Chemical Sunscreen</h2>
+        <p>Experience sophisticated sun defense with The Raw. Cera-Shield Chemical Sunscreen, a meticulously crafted formula designed to provide broad-spectrum UV protection with SPF 50 against both UVA and UVB rays. Infused with five essential ceramides (Ceramide EOP, Ceramide NS, Ceramide NP, Ceramide AP, and Ceramide AS), alongside cholesterol and fatty acids, this sunscreen actively contributes to maintaining a healthy skin barrier. Allantoin, a key ingredient, lends a soothing touch to the skin.</p>
+        <p class="price">RM47.00</p>
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div>    
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <div style="display: flex; gap: 30px; flex-wrap: wrap; justify-content: center;">
+        <p><a href="tel:+60178764932">📞 Contact Us: +6017-8764932</a></p>
+        <p><a href="about.html">👤 About Us</a></p>
+      </div>
+     <div class="social-icons" style="margin: 10px 0;">
+      <a href="https://www.instagram.com/theraw.skin?igsh=MW5lYWtkbmx5MXBpeA==" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@theraw.official?_t=ZS-8xy87hPNkL1&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+      <p><strong>The raw. Proud Malaysian Brand.</strong></p>
+    </div>
+  </footer>
+  <!-- AOS Animation Init -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+
+</body>
+</html>

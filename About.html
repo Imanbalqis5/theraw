@@ -1,0 +1,341 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Raw Skincare</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&family=Fredoka:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #ffeef5;
+      color: #333;
+    }
+
+   <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #ffeef5;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background-color: #ffd9e6;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Fredoka', sans-serif;
+      border-bottom: 2px solid #ffe6ee;
+    }
+
+    .logo a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .main-nav a {
+      color: #000;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 6px 10px;
+      position: relative;
+    }
+
+    .main-nav .dropdown {
+      position: relative;
+    }
+
+    .main-nav .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 35px;
+      left: 0;
+      background-color: #fff;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+      z-index: 1000;
+      border-radius: 8px;
+      min-width: 180px;
+      padding: 10px 0;
+    }
+
+    .main-nav .dropdown-content a {
+      display: block;
+      padding: 10px 20px;
+      color: #000;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .main-nav .dropdown:hover .dropdown-content,
+    .main-nav .dropdown:focus-within .dropdown-content {
+      display: block;
+    }
+
+    .header-icons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .header-icons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .header-icons a {
+      color: #000;
+      font-size: 18px;
+      text-decoration: none;
+    }
+    
+    .page-title {
+      text-align: center;
+      margin: 30px 0 10px;
+      font-family: 'Fredoka', sans-serif;
+      font-size: 38px;
+      font-weight: 700;
+      color: #ff3e80;
+      text-shadow: 2px 2px #ffc3d8, 4px 4px #ffbad2, 6px 6px #ffb2cc;
+    }
+
+    .section {
+      padding: 60px 40px;
+    }
+
+    .brand-section, .values-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      padding: 60px 40px;
+      flex-wrap: wrap;
+    }
+
+    .brand-section {
+      background-color: #fddbe7;
+    }
+
+    .values-section {
+      background-color: #ffd9e6;
+    }
+
+    .brand-section img,
+    .values-img img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 16px;
+      flex: 1;
+    }
+
+    .brand-caption, .values-text {
+      flex: 1;
+      max-width: 500px;
+      min-width: 280px;
+    }
+
+    .brand-caption h2,
+    .values-text h3 {
+      font-size: 32px;
+      font-family: 'Playfair Display', serif;
+      color: #c2185b;
+      margin-bottom: 10px;
+    }
+
+    .brand-caption p,
+    .values-text ul {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .values-text ul {
+      padding-left: 20px;
+    }
+
+    .team-section {
+      background-color: #fff0f7;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .team-section h2 {
+      font-size: 36px;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 30px;
+      color: #c2185b;
+    }
+
+    .team-slider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .team-image {
+      width: 320px;
+      height: 400px;
+      border-radius: 20px;
+      border: 8px solid white;
+      object-fit: cover;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      transition: opacity 0.5s ease;
+    }
+
+    .team-caption {
+      font-size: 18px;
+      font-family: 'Fredoka', sans-serif;
+      margin-top: 20px;
+      color: #444;
+    }
+
+    footer {
+      background-color: #ffd9e6;
+      text-align: center;
+      padding: 30px 10px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 10px 0;
+      font-family: 'Fredoka', sans-serif;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: #e91e63;
+      font-size: 24px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo"><a href="index.html">The Raw.</a></div>
+    <nav class="main-nav">
+      <div class="dropdown">
+        <a href="#">Shop</a>
+        <div class="dropdown-content">
+          <a href="All-products.html">All Products</a>
+          <a href="Cleanser.html">Cleanser</a>
+          <a href="Moisturiser.html">Moisturiser</a>
+          <a href="Serum.html">Serum</a>
+          <a href="Sunscreen.html">Sunscreen</a>
+          <a href="Acne-care.html">Acne Support Care</a>
+          <a href="Skincare-set.html">Skincare Set</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#">Featured</a>
+        <div class="dropdown-content">
+          <a href="Best-seller.html">Bestsellers</a>
+          <a href="Newarrivals.html">New Arrivals</a>
+        </div>
+      </div>
+    </nav>
+    <div class="header-icons">
+      <a href="#"><i class="fas fa-user"></i></a>
+      <a href="#"><i class="fas fa-search"></i></a>
+      <a href="#"><i class="fas fa-shopping-bag"></i></a>
+    </div>
+  </header>
+
+  <!-- PAGE TITLE -->
+  <h2 class="page-title">Our Story</h2>
+
+  <!-- THE BRAND SECTION -->
+  <section class="brand-section">
+    <img src="brand1.png" alt="The Brand Image">
+    <div class="brand-caption">
+      <h2>The Brand</h2>
+      <p>The Raw: Pioneering skincare based on pharmaceutical science. An innovative modern concept with 3 core values: Quality, Efficacy, and Safety in every drop.</p>
+    </div>
+  </section>
+
+  <!-- OUR VALUES SECTION -->
+  <section class="values-section">
+    <div class="values-img">
+      <img src="values1.jpg" alt="Lab and skincare values">
+    </div>
+    <div class="values-text">
+      <h3>Our Values</h3>
+      <ul>
+        <li><strong>SAFETY</strong> – Clinically proven & tested for safety.</li>
+        <li><strong>QUALITY</strong> – Made of high-quality, concentrated actives.</li>
+        <li><strong>EFFICACY</strong> – Effectively manages skin concerns.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- OUR TEAM MEMBERS SECTION -->
+  <section class="team-section">
+    <h2>Our Team Members</h2>
+    <div class="team-slider" id="teamSlider">
+      <div>
+        <img class="team-image" src="team1.jpg" alt="Team Member 1">
+        <div class="team-caption">Ms. Iman Balqis | 2023167459</div>
+      </div>
+      <div>
+        <img class="team-image" src="team2.jpg" alt="Team Member 2">
+        <div class="team-caption">Mr. Ahmad Azam | 2023159833</div>
+      </div>
+      <div>
+        <img class="team-image" src="team3.jpg" alt="Team Member 3">
+        <div class="team-caption">Ms. Nur Azizah | 2023172631</div>
+      </div>
+      <div>
+        <img class="team-image" src="team4.jpg" alt="Team Member 4">
+        <div class="team-caption">Ms. Siti Nurul Nasuha | 2023140583</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <div style="display: flex; gap: 30px; flex-wrap: wrap; justify-content: center;">
+        <p><a href="tel:+60178764932">📞 Contact Us: +6017-8764932</a></p>
+        <p><a href="about.html">👤 About Us</a></p>
+      </div>
+      < <div class="social-icons" style="margin: 10px 0;">
+      <a href="https://www.instagram.com/theraw.skin?igsh=MW5lYWtkbmx5MXBpeA==" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@theraw.official?_t=ZS-8xy87hPNkL1&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+      <p><strong>The raw. Proud Malaysian Brand.</strong></p>
+    </div>
+  </footer>
+
+  <!-- DROPDOWN SCRIPT -->
+  <script>
+    const shopLink = document.querySelector('nav div > a[href="#"]');
+    const dropdown = document.querySelector('.dropdown-menu');
+
+    shopLink.addEventListener('mouseover', () => {
+      dropdown.style.display = 'flex';
+    });
+    dropdown.addEventListener('mouseleave', () => {
+      dropdown.style.display = 'none';
+    });
+    shopLink.addEventListener('mouseleave', () => {
+      setTimeout(() => {
+        if (!dropdown.matches(':hover')) dropdown.style.display = 'none';
+      }, 200);
+    });
+  </script>
+
+</body>
+</html>

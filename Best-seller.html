@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Raw Skincare</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&family=Fredoka:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #ffeef5;
+      color: #333;
+    }
+
+   <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #ffeef5;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background-color: #ffd9e6;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Fredoka', sans-serif;
+      border-bottom: 2px solid #ffe6ee;
+    }
+
+    .logo a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .main-nav a {
+      color: #000;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 6px 10px;
+      position: relative;
+    }
+
+    .main-nav .dropdown {
+      position: relative;
+    }
+
+    .main-nav .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 35px;
+      left: 0;
+      background-color: #fff;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+      z-index: 1000;
+      border-radius: 8px;
+      min-width: 180px;
+      padding: 10px 0;
+    }
+
+    .main-nav .dropdown-content a {
+      display: block;
+      padding: 10px 20px;
+      color: #000;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .main-nav .dropdown:hover .dropdown-content,
+    .main-nav .dropdown:focus-within .dropdown-content {
+      display: block;
+    }
+
+    .header-icons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .header-icons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .header-icons a {
+      color: #000;
+      font-size: 18px;
+      text-decoration: none;
+    }
+    .best-seller-section {
+  padding: 60px 20px;
+  background-color: #fff0f6;
+  text-align: center;
+}
+
+.best-seller-title {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 42px;
+  color: #ff4d88;
+  text-shadow: 2px 2px #ffc1d9, 4px 4px #ffdde7;
+  margin-bottom: 40px;
+}
+
+.best-seller-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.product-box {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(255, 105, 180, 0.3);
+}
+
+.product-box img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  animation: floatIn 0.5s ease-in-out;
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.product-box .name {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+.product-box .price {
+  font-size: 14px;
+  color: #888;
+}
+
+/* Footer */
+    footer {
+      background-color: #ffd9e6;
+      text-align: center;
+      padding: 30px 10px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 10px 0;
+      font-family: 'Fredoka', sans-serif;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: #e91e63;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .icons {
+        margin-top: 10px;
+      }
+
+      .product-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .product-img {
+        width: 100%;
+        max-width: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+   <header>
+    <div class="logo"><a href="index.html">The Raw.</a></div>
+    <nav class="main-nav">
+      <div class="dropdown">
+        <a href="#">Shop</a>
+        <div class="dropdown-content">
+          <a href="All-products.html">All Products</a>
+          <a href="Cleanser.html">Cleanser</a>
+          <a href="Moisturiser.html">Moisturiser</a>
+          <a href="Serum.html">Serum</a>
+          <a href="Sunscreen.html">Sunscreen</a>
+          <a href="Acne-care.html">Acne Support Care</a>
+          <a href="Skincare-set.html">Skincare Set</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#">Featured</a>
+        <div class="dropdown-content">
+          <a href="Best-seller.html">Bestsellers</a>
+          <a href="Newarrivals.html">New Arrivals</a>
+        </div>
+      </div>
+    </nav>
+    <div class="header-icons">
+      <a href="#"><i class="fas fa-user"></i></a>
+      <a href="#"><i class="fas fa-search"></i></a>
+      <a href="#"><i class="fas fa-shopping-bag"></i></a>
+    </div>
+  </header>
+
+<!-- BEST SELLER SECTION -->
+<section class="best-seller-section">
+  <h2 class="best-seller-title">✨ Best Seller ✨</h2>
+  <div class="best-seller-grid">
+    <div class="product-box">
+      <img src="Cleanser1.jpg" alt="Cleanser" />
+      <p class="name">Rough & Bumpy Ceramides Cleanser</p>
+      <p class="price">From <strong>RM37.00</strong> <del>RM54.90</del></p>
+    </div>
+    <div class="product-box">
+      <img src="serum1.jpg" alt="Arbutin Serum" />
+      <p class="name">Arbutin 2% Serum</p>
+      <p class="price">From <strong>RM35.00</strong> <del>RM42.90</del></p>
+    </div>
+    <div class="product-box">
+      <img src="acnespot.jpg" alt="Acne Spot" />
+      <p class="name">Acne Spot Drying Solution</p>
+      <p class="price">From <strong>RM24.00</strong> <del>RM32.90</del></p>
+    </div>
+    <div class="product-box">
+      <img src="moisturiser2.jpg" alt="Moisturiser" />
+      <p class="name">Daily Ceramides Moisturiser</p>
+      <p class="price"><strong>Sold Out</strong></p>
+    </div>
+    <div class="product-box">
+      <img src="sunscreen1.jpg" alt="Sunscreen" />
+      <p class="name">Cera-Shield Physical Sunscreen</p>
+      <p class="price">RM45.00</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+  <footer>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <div style="display: flex; gap: 30px; flex-wrap: wrap; justify-content: center;">
+        <p><a href="tel:+60178764932">📞 Contact Us: +6017-8764932</a></p>
+        <p><a href="about.html">👤 About Us</a></p>
+      </div>
+     <div class="social-icons" style="margin: 10px 0;">
+      <a href="https://www.instagram.com/theraw.skin?igsh=MW5lYWtkbmx5MXBpeA==" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@theraw.official?_t=ZS-8xy87hPNkL1&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+      <p><strong>The raw. Proud Malaysian Brand.</strong></p>
+    </div>
+  </footer>
+  <!-- AOS Animation Init -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+
+</body>
+</html>

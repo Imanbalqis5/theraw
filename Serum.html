@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Raw Skincare</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&family=Fredoka:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #ffeef5;
+      color: #333;
+    }
+
+   <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #ffeef5;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background-color: #ffd9e6;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Fredoka', sans-serif;
+      border-bottom: 2px solid #ffe6ee;
+    }
+
+    .logo a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .main-nav a {
+      color: #000;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 6px 10px;
+      position: relative;
+    }
+
+    .main-nav .dropdown {
+      position: relative;
+    }
+
+    .main-nav .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 35px;
+      left: 0;
+      background-color: #fff;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+      z-index: 1000;
+      border-radius: 8px;
+      min-width: 180px;
+      padding: 10px 0;
+    }
+
+    .main-nav .dropdown-content a {
+      display: block;
+      padding: 10px 20px;
+      color: #000;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .main-nav .dropdown:hover .dropdown-content,
+    .main-nav .dropdown:focus-within .dropdown-content {
+      display: block;
+    }
+
+    .header-icons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .header-icons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .header-icons a {
+      color: #000;
+      font-size: 18px;
+      text-decoration: none;
+    }
+    
+    /* Product Section */
+    .product-section {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      padding: 40px 20px;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .product-card {
+      align-items: flex-start;
+      width: calc(50% - 20px);
+      max-width: 600px;
+      padding-left: 100px;
+      padding-right: 100px;
+      box-sizing: border-box;
+      margin-bottom: 30px;
+      horizontal-align: center;
+    }
+
+    .product-img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      margin-right: 20px;
+      flex-shrink: 0;
+    }    
+
+    .product-details {
+      max-width: 400px;
+    }
+
+    .product-details h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: #c2185b;
+    }
+
+    .product-details p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      color: #558b2f;
+    }
+
+    .buy-btn {
+      padding: 10px 20px;
+      background-color: #e91e63;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .buy-btn:hover {
+      background-color: #c2185b;
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #ffd9e6;
+      text-align: center;
+      padding: 30px 10px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 10px 0;
+      font-family: 'Fredoka', sans-serif;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: #e91e63;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .icons {
+        margin-top: 10px;
+      }
+
+      .product-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .product-img {
+        width: 100%;
+        max-width: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+   <header>
+    <div class="logo"><a href="index.html">The Raw.</a></div>
+    <nav class="main-nav">
+      <div class="dropdown">
+        <a href="#">Shop</a>
+        <div class="dropdown-content">
+          <a href="All-products.html">All Products</a>
+          <a href="Cleanser.html">Cleanser</a>
+          <a href="Moisturiser.html">Moisturiser</a>
+          <a href="Serum.html">Serum</a>
+          <a href="Sunscreen.html">Sunscreen</a>
+          <a href="Acne-care.html">Acne Support Care</a>
+          <a href="Skincare-set.html">Skincare Set</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#">Featured</a>
+        <div class="dropdown-content">
+          <a href="Best-seller.html">Bestsellers</a>
+          <a href="Newarrivals.html">New Arrivals</a>
+        </div>
+      </div>
+    </nav>
+    <div class="header-icons">
+      <a href="#"><i class="fas fa-user"></i></a>
+      <a href="#"><i class="fas fa-search"></i></a>
+      <a href="#"><i class="fas fa-shopping-bag"></i></a>
+    </div>
+  </header>
+
+  <!-- Product Section -->
+  <section class="product-section">
+
+    <!-- Arbutin 2% Serum -->
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="0">
+      <img src="serum1.jpg" alt="Arbutin 2% Serum" class="product-img">
+      <div class="product-details">
+        <h2>Arbutin 2% Serum</h2>
+        <p>The 3X Whitening serum is formulated with 3 powerful whitening actives, which are Arbutin, Niacinamide, and Glutathione, all at optimal concentrations combined to give you maximum and effective results. Rich with Provitamin B5 and Hyaluronic Acid to enhance skin moisture repair and product absorption. Ideal for Asian skin, the serum is light, quickly absorbed, and non-greasy. To lighten dark spots, improve uneven skin complexion and fade acne scars appearances (post-inflammatory hyperpigmentation – PIH).</p>
+        <p class="price">RM52.00</p>
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Strong Barrier Serum -->
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+      <img src="serum2.jpg" alt="Strong Barrier Serum" class="product-img">
+      <div class="product-details">
+        <h2>Strong Barrier Serum</h2>
+        <p>Supplementing your skin barrier with essential lipids and Natural Moisturising Factors (NMFs) to build a strong skin barrier function. The goal is to promote an intact skin barrier which is important to keep the skin healthy. The texture is “Ready-to-Layer”, meaning it is super lightweight and absorbs almost instantly. Suitable for layering on your favourite products afterwards.</p>  
+        <p class="price">RM54.00</p>
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Niacinamide 5% Serum -->
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="serum3.jpg" alt="Niacinamide 5% Serum" class="product-img">
+      <div class="product-details">
+        <h2>Niacinamide 5% Serum</h2>
+        <p>While maintaining its remarkable formulation of Niacinamide 5% and the anti-blemish cocktail mix of Salicylic Acid & Glycolic Acid, this new version of Niacinamide serum is added with Green Tea Extract, Centella Asiatica Extract, Willow Bark Extract & Probiotics. This new formula will enhance the serum’s effectiveness to better control sebum production, minimize the visibility of pores, and helps to clear the skin from acne and congested pores.</p>
+        <p class="price">RM49.00</p>
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Awaken Young Eye Serum -->
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="serum4.jpg" alt="Awaken Young Eye Serum" class="product-img">
+      <div class="product-details">
+        <h2>Awaken Young Eye Serum</h2>
+        <p>The Raw. Awaken young eye serum is an innovative formula designed to provide comprehensive care for your under-eye area, targeting both eye firming and signs look of aging. A potent combination of active ingredients including AC-HPR-S10 2%, Col-Frag remastered™ 2%, and Adenosine 0.1% work synergistically to promote protection of wrinkle under the eyes, effectively reducing visible signs look of aging for a smoother, brighter, and more radiant appearance.</p>
+        <p class="price">RM59.00</p>
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Ethylated Ascorbic Acid 20% Serum -->
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="serum5.jpg" alt="Ethylated Ascorbic Acid 20% Serum" class="product-img">
+      <div class="product-details">
+        <h2>Ethylated Ascorbic Acid 20% Serum</h2>
+        <p>Extremely lightweight and fast absorption. This serum is a quicker approach to achieve a radiant, brighter & younger healthy-looking skin. Formulated with 3 powerful blends of antioxidants: Vitamin C, Vitamin E and Ferulic Acid ensure total protection against photoaging (results from oxidative stress).</p>
+        <p class="price">RM78.00</p>
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div> 
+
+    <!-- Retinol 0.3% Serum -->
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="serum6.jpg" alt="Retinol 0.3% Serum" class="product-img">
+      <div class="product-details">
+        <h2>Retinol 0.3% Serum</h2>
+        <p>Retinol 0.3% is a potent active that helps reduce fine lines and wrinkles by renewing skin cells. Enriched with Arginine and Polypeptide, it boosts collagen matrix production, resulting in firmer and smoother skin. This formula aims to restore youthfulness, leaving your skin revitalized. Helps smooth fine lines and wrinkles. Improves skin texture and radiance.</p>
+        <p class="price">RM89.00</p>
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div>               
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <div style="display: flex; gap: 30px; flex-wrap: wrap; justify-content: center;">
+        <p><a href="tel:+60178764932">📞 Contact Us: +6017-8764932</a></p>
+        <p><a href="about.html">👤 About Us</a></p>
+      </div>
+     <div class="social-icons" style="margin: 10px 0;">
+      <a href="https://www.instagram.com/theraw.skin?igsh=MW5lYWtkbmx5MXBpeA==" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@theraw.official?_t=ZS-8xy87hPNkL1&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+      <p><strong>The raw. Proud Malaysian Brand.</strong></p>
+    </div>
+  </footer>
+  <!-- AOS Animation Init -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+
+</body>
+</html>

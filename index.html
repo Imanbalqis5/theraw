@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Raw Skincare</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&family=Fredoka:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #ffeef5;
+      color: #333;
+    }
+
+   <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #ffeef5;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background-color: #ffd9e6;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Fredoka', sans-serif;
+      border-bottom: 2px solid #ffe6ee;
+    }
+
+    .logo a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .main-nav a {
+      color: #000;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 6px 10px;
+      position: relative;
+    }
+
+    .main-nav .dropdown {
+      position: relative;
+    }
+
+    .main-nav .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 35px;
+      left: 0;
+      background-color: #fff;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+      z-index: 1000;
+      border-radius: 8px;
+      min-width: 180px;
+      padding: 10px 0;
+    }
+
+    .main-nav .dropdown-content a {
+      display: block;
+      padding: 10px 20px;
+      color: #000;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .main-nav .dropdown:hover .dropdown-content,
+    .main-nav .dropdown:focus-within .dropdown-content {
+      display: block;
+    }
+
+    .header-icons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .header-icons a {
+      color: #000;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    /* Banner */
+    .banner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 80px;
+      background-color: #fff0f6;
+      flex-wrap: wrap;
+    }
+
+    .banner-text {
+      flex: 1;
+      min-width: 300px;
+      max-width: 50%;
+    }
+
+    .banner-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 44px;
+      color: #ff4d88;
+      margin-bottom: 10px;
+    }
+
+    .fancy-text {
+      font-size: 70px;
+      font-weight: 700;
+      color: #ff4f8b;
+      text-shadow: 0 2px 4px #e91e63, 0 4px 8px #d81b60, 0 6px 12px #c2185b;
+      letter-spacing: -1px;
+      font-family: 'Fredoka', sans-serif;
+      margin-top: 10px;
+    }
+
+    .promo {
+      background-color: #e6005c;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .shop-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 30px;
+      background-color: #ff4d88;
+      color: white;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      font-family: 'Fredoka', sans-serif;
+    }
+
+    .banner-img {
+      flex: 1;
+      min-width: 300px;
+      position: relative;
+      height: 400px;
+      max-width: 400px;
+    }
+
+    .banner-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 30px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .banner-img img.active {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    /* Video Gallery */
+    .video-section-title {
+      text-align: center;
+      font-size: 40px;
+      font-family: 'Playfair Display', serif;
+      color: #ff4d88;
+      margin-top: 60px;
+    }
+
+    .video-gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .video-card {
+      flex: 0 0 auto;
+      width: 240px;
+      background-color: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .video-card video {
+      width: 100%;
+      height: auto;
+      border-radius: 16px 16px 0 0;
+    }
+
+    .caption {
+      padding: 10px 0;
+      font-size: 16px;
+      color: #444;
+      font-family: 'Fredoka', sans-serif;
+    }
+
+    /* Influencer Section */
+    .influencer-section {
+      padding: 60px 40px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .influencer-main {
+      flex: 1;
+      max-width: 300px;
+    }
+
+    .influencer-main video {
+      width: 100%;
+      border-radius: 16px;
+    }
+
+    .influencer-main .caption {
+      text-align: center;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    .influencer-extra {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      flex-wrap: wrap;
+      max-width: 700px;
+    }
+
+    .influencer-extra .video-card {
+      width: 200px;
+    }
+
+ .store-slider-section {
+      padding: 50px 20px;
+      background-color: #fff0f5;
+      text-align: center;
+    }
+
+    .store-slider-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      color: #ff4d88;
+      margin-bottom: 30px;
+    }
+
+    .store-slider {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 0 10px;
+      scroll-snap-type: x mandatory;
+      justify-content: center;
+    }
+
+    .store-slide {
+      flex: 0 0 auto;
+      width: 300px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      scroll-snap-align: start;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .store-slide img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .store-caption {
+      padding: 15px;
+      font-family: 'Fredoka', sans-serif;
+      font-size: 16px;
+    }
+    }
+
+    /* Footer */
+     footer {
+      background-color: #ffd9e6;
+      text-align: center;
+      padding: 30px 10px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 10px 0;
+      font-family: 'Fredoka', sans-serif;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: #e91e63;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .icons {
+        margin-top: 10px;
+      }
+
+      .banner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .banner-text, .banner-img {
+        max-width: 100%;
+      }
+
+      .fancy-text {
+        font-size: 50px;
+      }
+
+      .influencer-section {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo"><a href="index.html">The Raw.</a></div>
+    <nav class="main-nav">
+      <div class="dropdown" tabindex="0">
+        <a href="#">Shop</a>
+        <div class="dropdown-content">
+          <a href="All-products.html">All Products</a>
+          <a href="cleanser.html">Cleanser</a>
+          <a href="moisturiser.html">Moisturiser</a>
+          <a href="serum.html">Serum</a>
+          <a href="sunscreen.html">Sunscreen</a>
+          <a href="acne-care.html">Acne Support Care</a>
+          <a href="set.html">Skincare Set</a>
+        </div>
+      </div>
+      <div class="dropdown" tabindex="0">
+        <a href="#">Featured</a>
+        <div class="dropdown-content">
+          <a href="Best-seller.html">Bestsellers</a>
+          <a href="Newarrivals.html">New Arrivals</a>
+        </div>
+      </div>
+    </nav>
+    <div class="header-icons">
+      <a href="account.html"><i class="fas fa-user"></i></a>
+      <a href="search.html"><i class="fas fa-search"></i></a>
+      <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
+    </div>
+  </header>
+
+  <!-- BANNER -->
+  <section class="banner">
+    <div class="banner-text">
+      <h2>SKINCARE FOR YOUR SKIN</h2>
+      <div class="fancy-text">10% FOR NEW USER</div>
+      <div class="promo">Until 05.17 MYT</div>
+      <a class="shop-btn" href="All-products.html">Shop Now</a>
+    </div>
+    <div class="banner-img">
+      <img src="banner1.JPG" class="active" />
+      <img src="banner2.JPG" />
+      <img src="banner3.JPG" />
+      <img src="banner4.JPG" />
+      <img src="banner5.JPG" />
+    </div>
+  </section>
+
+  <!-- VIDEO SECTION -->
+  <h2 class="video-section-title">FOR YOUR SKIN</h2>
+  <div class="video-gallery">
+    <div class="video-card">
+      <video src="fyv1.mp4" autoplay muted loop></video>
+      <div class="caption">Cleanser</div>
+    </div>
+    <div class="video-card">
+      <video src="fyv2.mp4" autoplay muted loop></video>
+      <div class="caption">Moisturiser</div>
+    </div>
+    <div class="video-card">
+      <video src="fyv3.mp4" autoplay muted loop></video>
+      <div class="caption">Serum</div>
+    </div>
+    <div class="video-card">
+      <video src="fyv4.mp4" autoplay muted loop></video>
+      <div class="caption">Sunscreen</div>
+    </div>
+    <div class="video-card">
+      <video src="fyv5.mp4" autoplay muted loop></video>
+      <div class="caption">Acne Spot Solution</div>
+    </div>
+  </div>
+
+  <!-- INFLUENCER SECTION -->
+  <h2 class="video-section-title">WHAT INFLUENCER SAYS ABOUT US?</h2>
+  <section class="influencer-section">
+    <div class="influencer-main">
+  <video src="pinnyang.mp4" autoplay controls loop></video>
+  <div class="caption">Pinn Yang review</div>
+    </div>
+    <div class="influencer-extra">
+      <div class="video-card">
+        <video src="review1.mp4" autoplay muted loop></video>
+        <div class="caption">Cleanser review by wan</div>
+      </div>
+      <div class="video-card">
+        <video src="review2.mp4" autoplay muted loop></video>
+        <div class="caption">Cleanser review by Flareywings</div>
+      </div>
+      <div class="video-card">
+        <video src="review3.mp4" autoplay muted loop></video>
+        <div class="caption">Serum review</div>
+      </div>
+    </div>
+  </section>
+
+   <!-- OUR STORE SLIDER -->
+  <section class="store-slider-section">
+    <h2>Our Store</h2>
+    <div class="store-slider">
+      <div class="store-slide">
+        <img src="guardian.jpg" alt="the guardian">
+        <div class="store-caption">
+          <strong>GUARDIAN</strong><br>
+         STORE<br>
+          Available over 200+ store<br>
+          Across Malaysia
+        </div>
+      </div>
+      <div class="store-slide">
+        <img src="aeonwellness.jpg" alt="Aeon wellness">
+        <div class="store-caption">
+          <strong>AEON WELLNESS</strong><br>
+          STORE<br>
+          Available over 60 stores,<br>
+          Across Malaysia
+        </div>
+      </div>
+      <div class="store-slide">
+        <img src="watson.jpg" alt="WATSON">
+        <div class="store-caption">
+          <strong>WATSON</strong><br>
+          Available over 200+ stores<br>
+          Across Malaysia
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+   <footer>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <div style="display: flex; gap: 30px; flex-wrap: wrap; justify-content: center;">
+        <p><a href="tel:+60178764932">📞 Contact Us: +6017-8764932</a></p>
+        <p><a href="about.html">👤 About Us</a></p>
+      </div>
+       <div class="social-icons" style="margin: 10px 0;">
+      <a href="https://www.instagram.com/theraw.skin?igsh=MW5lYWtkbmx5MXBpeA==" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@theraw.official?_t=ZS-8xy87hPNkL1&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+      <p><strong>The raw. Proud Malaysian Brand.</strong></p>
+    </div>
+  </footer>
+
+
+  <!-- SLIDER SCRIPT -->
+  <script>
+    const slides = document.querySelectorAll(".banner-img img");
+    let current = 0;
+    function showNextSlide() {
+      slides[current].classList.remove("active");
+      current = (current + 1) % slides.length;
+      slides[current].classList.add("active");
+    }
+    setInterval(showNextSlide, 3000);
+  </script>
+
+</body>
+</html>

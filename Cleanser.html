@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Raw Skincare</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&family=Fredoka:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #ffeef5;
+      color: #333;
+    }
+
+   <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #ffeef5;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background-color: #ffd9e6;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Fredoka', sans-serif;
+      border-bottom: 2px solid #ffe6ee;
+    }
+
+    .logo a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .main-nav a {
+      color: #000;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 6px 10px;
+      position: relative;
+    }
+
+    .main-nav .dropdown {
+      position: relative;
+    }
+
+    .main-nav .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 35px;
+      left: 0;
+      background-color: #fff;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+      z-index: 1000;
+      border-radius: 8px;
+      min-width: 180px;
+      padding: 10px 0;
+    }
+
+    .main-nav .dropdown-content a {
+      display: block;
+      padding: 10px 20px;
+      color: #000;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .main-nav .dropdown:hover .dropdown-content,
+    .main-nav .dropdown:focus-within .dropdown-content {
+      display: block;
+    }
+
+    .header-icons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .header-icons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .header-icons a {
+      color: #000;
+      font-size: 18px;
+      text-decoration: none;
+    }
+    
+    /* Product Section */
+    .product-section {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      padding: 40px 20px;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .product-details {
+      max-width: 400px;
+    }
+
+    .product-details h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: #c2185b;
+    }
+
+    .product-details p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      color: #558b2f;
+    }
+
+    .buy-btn {
+      padding: 10px 20px;
+      background-color: #e91e63;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .buy-btn:hover {
+      background-color: #c2185b;
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #ffd9e6;
+      text-align: center;
+      padding: 30px 10px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 10px 0;
+      font-family: 'Fredoka', sans-serif;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: #e91e63;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .icons {
+        margin-top: 10px;
+      }
+
+      .product-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .product-img {
+        width: 100%;
+        max-width: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+   <header>
+    <div class="logo"><a href="index.html">The Raw.</a></div>
+    <nav class="main-nav">
+      <div class="dropdown">
+        <a href="#">Shop</a>
+        <div class="dropdown-content">
+          <a href="All-products.html">All Products</a>
+          <a href="Cleanser.html">Cleanser</a>
+          <a href="Moisturiser.html">Moisturiser</a>
+          <a href="Serum.html">Serum</a>
+          <a href="Sunscreen.html">Sunscreen</a>
+          <a href="Acne-care.html">Acne Support Care</a>
+          <a href="Skincare-set.html">Skincare Set</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#">Featured</a>
+        <div class="dropdown-content">
+          <a href="Best-seller.html">Bestsellers</a>
+          <a href="Newarrivals.html">New Arrivals</a>
+        </div>
+      </div>
+    </nav>
+    <div class="header-icons">
+      <a href="#"><i class="fas fa-user"></i></a>
+      <a href="#"><i class="fas fa-search"></i></a>
+      <a href="#"><i class="fas fa-shopping-bag"></i></a>
+    </div>
+  </header>
+
+  <!-- Product Section -->
+  <section class="product-section">
+
+    <!-- Hydrating Ceramide Cleanser -->
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="0">
+      <img src="cleanser.jpg" alt="Hydrating Ceramide Cleanser" class="product-img">
+      <div class="product-details">
+        <h2>Hydrating Ceramide Cleanser</h2>
+        <p>A soothing formula designed to restore your skin’s natural barrier while delivering intense hydration. Enriched with essential ceramides and hyaluronic acid, this non-stripping cleanser removes dirt and oil without drying your skin.</p>
+        <p class="price">RM39.00</p>
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Rough & Bumpy Ceramide Cleanser -->
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+      <img src="cleanser1.jpg" alt="Rough & Bumpy Ceramide Cleanser" class="product-img">
+      <div class="product-details">
+        <h2>Rough & Bumpy Ceramide Cleanser</h2>
+        <p>This gentle cleanser targets rough and bumpy skin texture. With ceramides and exfoliating ingredients, it smooths the skin while preserving hydration and reducing flakiness.</p>
+        <p class="price">RM42.00</p>
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Acne Ceramide Cleanser -->
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="cleanser2.jpg" alt="Acne Ceramide Cleanser" class="product-img">
+      <div class="product-details">
+        <h2>Acne Ceramide Cleanser</h2>
+        <p>A clarifying formula made for acne-prone skin. Infused with salicylic acid and ceramides, it clears clogged pores, reduces breakouts, and calms inflammation without stripping your skin.</p>
+        <p class="price">RM45.00</p>
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <div style="display: flex; gap: 30px; flex-wrap: wrap; justify-content: center;">
+        <p><a href="tel:+60178764932">📞 Contact Us: +6017-8764932</a></p>
+        <p><a href="about.html">👤 About Us</a></p>
+      </div>
+     <div class="social-icons" style="margin: 10px 0;">
+      <a href="https://www.instagram.com/theraw.skin?igsh=MW5lYWtkbmx5MXBpeA==" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@theraw.official?_t=ZS-8xy87hPNkL1&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+      <p><strong>The raw. Proud Malaysian Brand.</strong></p>
+    </div>
+  </footer>
+  <!-- AOS Animation Init -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Products - The Raw Skincare</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&family=Fredoka:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #ffeef5;
+      color: #333;
+    }
+
+    header {
+      background-color: #ffd9e6;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Fredoka', sans-serif;
+      border-bottom: 2px solid #ffe6ee;
+    }
+
+    .logo a {
+      color: #000;
+      text-decoration: none;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .main-nav a {
+      color: #000;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 6px 10px;
+      position: relative;
+    }
+
+    .main-nav .dropdown {
+      position: relative;
+    }
+
+    .main-nav .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 35px;
+      left: 0;
+      background-color: #fff;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+      z-index: 1000;
+      border-radius: 8px;
+      min-width: 180px;
+      padding: 10px 0;
+    }
+
+    .main-nav .dropdown-content a {
+      display: block;
+      padding: 10px 20px;
+      color: #000;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .main-nav .dropdown:hover .dropdown-content,
+    .main-nav .dropdown:focus-within .dropdown-content {
+      display: block;
+    }
+
+    .header-icons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .header-icons a {
+      color: #000;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    .section-title {
+      text-align: center;
+      font-family: 'Fredoka', sans-serif;
+      font-size: 36px;
+      color: #e91e63;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+      margin-top: 60px;
+      margin-bottom: 20px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+.product-details h2 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 18px;
+  color: #e91e63;
+  text-shadow: 1px 1px #ffd6e9;
+  margin-bottom: 10px;
+}
+
+.product-details p {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #444;
+}
+
+.product-details .price {
+  font-weight: bold;
+  color: #d81b60;
+  font-size: 16px;
+  margin: 10px 0;
+  text-shadow: 1px 1px #ffe6f0;
+}
+
+.buy-btn {
+  background-color: #ffb6c1;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 2px 2px 5px rgba(255, 192, 203, 0.5);
+}
+
+.buy-btn:hover {
+  background-color: #ff88aa;
+  transform: translateY(-2px);
+}
+    .product-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 280px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      animation: fadeIn 1s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-bottom: 2px solid #ffe6ee;
+    }
+
+    .product-caption {
+      padding: 15px;
+      font-family: 'Fredoka', sans-serif;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #ffd9e6;
+      text-align: center;
+      padding: 30px 10px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 10px 0;
+      font-family: 'Fredoka', sans-serif;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: #e91e63;
+      font-size: 24px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html">The Raw.</a></div>
+    <nav class="main-nav">
+      <div class="dropdown">
+        <a href="#">Shop</a>
+        <div class="dropdown-content">
+          <a href="All-products.html">All Products</a>
+          <a href="Cleanser.html">Cleanser</a>
+          <a href="Moisturiser.html">Moisturiser</a>
+          <a href="Serum.html">Serum</a>
+          <a href="Sunscreen.html">Sunscreen</a>
+          <a href="Acne-care.html">Acne Support Care</a>
+          <a href="Skincare-set.html">Skincare Set</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#">Featured</a>
+        <div class="dropdown-content">
+          <a href="Best-seller.html">Bestsellers</a>
+          <a href="Newarrivals.html">New Arrivals</a>
+        </div>
+      </div>
+    </nav>
+    <div class="header-icons">
+      <a href="#"><i class="fas fa-user"></i></a>
+      <a href="#"><i class="fas fa-search"></i></a>
+      <a href="#"><i class="fas fa-shopping-bag"></i></a>
+    </div>
+  </header>
+
+  <h2 class="section-title">Cleanser</h2>
+  <section class="product-section">
+    <<!-- Hydrating Ceramide Cleanser -->
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="0">
+      <img src="cleanser.jpg" alt="Hydrating Ceramide Cleanser" class="product-img">
+      <div class="product-details">
+        <h2>Hydrating Ceramide Cleanser</h2>
+        <p>A soothing formula designed to restore your skin’s natural barrier while delivering intense hydration. Enriched with essential ceramides and hyaluronic acid, this non-stripping cleanser removes dirt and oil without drying your skin.</p>
+        <p class="price">RM39.00</p>
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Rough & Bumpy Ceramide Cleanser -->
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+      <img src="cleanser1.jpg" alt="Rough & Bumpy Ceramide Cleanser" class="product-img">
+      <div class="product-details">
+        <h2>Rough & Bumpy Ceramide Cleanser</h2>
+        <p>This gentle cleanser targets rough and bumpy skin texture. With ceramides and exfoliating ingredients, it smooths the skin while preserving hydration and reducing flakiness.</p>
+        <p class="price">RM42.00</p>
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Acne Ceramide Cleanser -->
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="cleanser2.jpg" alt="Acne Ceramide Cleanser" class="product-img">
+      <div class="product-details">
+        <h2>Acne Ceramide Cleanser</h2>
+        <p>A clarifying formula made for acne-prone skin. Infused with salicylic acid and ceramides, it clears clogged pores, reduces breakouts, and calms inflammation without stripping your skin.</p>
+        <p class="price">RM45.00</p>
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <h2 class="section-title">Moisturiser</h2>
+  <section class="product-section">
+    <!-- Ceramide Gel Moisturiser -->
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="0">
+      <img src="moisturiser1.jpg" alt="Ceramide Gel Moisturiser" class="product-img">
+      <div class="product-details">
+        <h2>Ceramide Gel Moisturiser</h2>
+        <p>Lightweight gel formula perfect for oily and combination skin. Packed with ceramides and niacinamide to hydrate, calm, and control shine without clogging pores.</p>
+        <p class="price">RM48.00</p>
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Daily Ceramide Moisturiser -->
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+      <img src="moisturiser2.jpg" alt="Daily Ceramide Moisturiser" class="product-img">
+      <div class="product-details">
+        <h2>Daily Ceramide Moisturiser</h2>
+        <p>Everyday hydration for normal to dry skin. Strengthens skin barrier with ceramides and hyaluronic acid for all-day comfort and smoothness.</p>
+        <p class="price">RM52.00</p>
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Daily Ceramides Cream -->
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="moisturiser3.jpg" alt="Daily Ceramides Cream" class="product-img">
+      <div class="product-details">
+        <h2>Daily Ceramides Cream</h2>
+        <p>Rich cream formula ideal for sensitive and damaged skin. Helps lock in moisture and repair barrier damage overnight.</p>
+        <p class="price">RM55.00</p>
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <h2 class="section-title">Acne Support Care</h2>
+  <section class="product-section">
+    <!-- Acne Spot Drying Solution -->
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="0">
+      <img src="acnespot.jpg" alt="Acne Spot Drying Solution" class="product-img">
+      <div class="product-details">
+        <h2>Acne Spot Drying Solution</h2>
+        <p>Acne Spot Drying Solution is an overnight drying solution helps to hasten the resolution of visible acne spots (papule-pustules). It is uniquely formulated with several actives and complementary ingredients for better results.</p>
+        <p class="price">RM33.00</p>
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <h2 class="section-title">Sunscreen</h2>
+  <section class="product-section">
+    <!-- Cera-Shield Physical Sunscreen -->
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="0">
+      <img src="sunscreen1.jpg" alt="Cera-Shield Physical Sunscreen" class="product-img">
+      <div class="product-details">
+        <h2>Cera-Shield Physical Sunscreen</h2>
+        <p>Unlock the pinnacle of sun protection with The Raw. Cera-Shield Physical Sunscreen. This advanced, broad-spectrum sunscreen is meticulously designed to shield your skin from the damaging effects of UVA and UVB rays. Suitable for both your face and body, it offers a comprehensive defense against the sun's harmful rays.</p>
+        <p class="price">RM45.00</p>
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Cera-Shield Hybrid Sunscreen -->
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+      <img src="sunscreen2.jpg" alt="Cera-Shield Hybrid Sunscreen" class="product-img">
+      <div class="product-details">
+        <h2>Cera-Shield Hybrid Sunscreen</h2>
+        <p>Introducing the cutting-edge synergy of physical and chemical sunscreens – The Raw. Cera-Shield Hybrid Sunscreen. This innovative formulation seamlessly combines reflective and absorptive properties to deliver broad-spectrum coverage against UVA and UVB rays with SPF 50. Enriched with five powerful combinations of ceramides, cholesterol, and fatty acids, this product not only protects but also strengthens the skin barrier.
+        </p>  
+        <p class="price">RM49.00</p>
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Aqua Cera-Tinted Sunscreen SPF 50+ PA++++ Broad Spectrum UVA / UVB (For Face & Body) -->
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="sunscreen3.jpg" alt="Aqua Cera-Tinted Sunscreen SPF 50+ PA++++ Broad Spectrum UVA / UVB (For Face & Body)" class="product-img">
+      <div class="product-details">
+        <h2>Aqua Cera-Tinted Sunscreen SPF 50+ PA++++ Broad Spectrum UVA / UVB (For Face & Body)</h2>
+        <p>With SPF 50+ PA++++, this sunscreen shields your skin from harmful UV rays and blue light while nourishing and enhancing its natural barrier. It has no white cast and offers a healthy matte finish with light coverage, evening out your skin tone for a natural look. Enjoy long-lasting protection without dullness or tightness, ensuring radiant and comfortable skin throughout the day. Uniquely blended with 5 anti-pollution ingredients, it is perfect for daily use and helps you achieve a natural, shine-free look all day while helping to protect against environmental damage.</p>
+        <p class="price">RM49.00</p>
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Cera-Shield Chemical Sunscreen -->
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="sunscreen4.jpg" alt="Cera-Shield Chemical Sunscreen" class="product-img">
+      <div class="product-details">
+        <h2>Cera-Shield Chemical Sunscreen</h2>
+        <p>Experience sophisticated sun defense with The Raw. Cera-Shield Chemical Sunscreen, a meticulously crafted formula designed to provide broad-spectrum UV protection with SPF 50 against both UVA and UVB rays. Infused with five essential ceramides (Ceramide EOP, Ceramide NS, Ceramide NP, Ceramide AP, and Ceramide AS), alongside cholesterol and fatty acids, this sunscreen actively contributes to maintaining a healthy skin barrier. Allantoin, a key ingredient, lends a soothing touch to the skin.</p>
+        <p class="price">RM47.00</p>
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div>    
+
+  </section>
+
+  <h2 class="section-title">Serum</h2>
+  <section class="product-section">
+   <!-- Arbutin 2% Serum -->
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="0">
+      <img src="serum1.jpg" alt="Arbutin 2% Serum" class="product-img">
+      <div class="product-details">
+        <h2>Arbutin 2% Serum</h2>
+        <p>The 3X Whitening serum is formulated with 3 powerful whitening actives, which are Arbutin, Niacinamide, and Glutathione, all at optimal concentrations combined to give you maximum and effective results. Rich with Provitamin B5 and Hyaluronic Acid to enhance skin moisture repair and product absorption. Ideal for Asian skin, the serum is light, quickly absorbed, and non-greasy. To lighten dark spots, improve uneven skin complexion and fade acne scars appearances (post-inflammatory hyperpigmentation – PIH).</p>
+        <p class="price">RM52.00</p>
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Strong Barrier Serum -->
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+      <img src="serum2.jpg" alt="Strong Barrier Serum" class="product-img">
+      <div class="product-details">
+        <h2>Strong Barrier Serum</h2>
+        <p>Supplementing your skin barrier with essential lipids and Natural Moisturising Factors (NMFs) to build a strong skin barrier function. The goal is to promote an intact skin barrier which is important to keep the skin healthy. The texture is “Ready-to-Layer”, meaning it is super lightweight and absorbs almost instantly. Suitable for layering on your favourite products afterwards.</p>  
+        <p class="price">RM54.00</p>
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Niacinamide 5% Serum -->
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="serum3.jpg" alt="Niacinamide 5% Serum" class="product-img">
+      <div class="product-details">
+        <h2>Niacinamide 5% Serum</h2>
+        <p>While maintaining its remarkable formulation of Niacinamide 5% and the anti-blemish cocktail mix of Salicylic Acid & Glycolic Acid, this new version of Niacinamide serum is added with Green Tea Extract, Centella Asiatica Extract, Willow Bark Extract & Probiotics. This new formula will enhance the serum’s effectiveness to better control sebum production, minimize the visibility of pores, and helps to clear the skin from acne and congested pores.</p>
+        <p class="price">RM49.00</p>
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Awaken Young Eye Serum -->
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="serum4.jpg" alt="Awaken Young Eye Serum" class="product-img">
+      <div class="product-details">
+        <h2>Awaken Young Eye Serum</h2>
+        <p>The Raw. Awaken young eye serum is an innovative formula designed to provide comprehensive care for your under-eye area, targeting both eye firming and signs look of aging. A potent combination of active ingredients including AC-HPR-S10 2%, Col-Frag remastered™ 2%, and Adenosine 0.1% work synergistically to promote protection of wrinkle under the eyes, effectively reducing visible signs look of aging for a smoother, brighter, and more radiant appearance.</p>
+        <p class="price">RM59.00</p>
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Ethylated Ascorbic Acid 20% Serum -->
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="serum5.jpg" alt="Ethylated Ascorbic Acid 20% Serum" class="product-img">
+      <div class="product-details">
+        <h2>Ethylated Ascorbic Acid 20% Serum</h2>
+        <p>Extremely lightweight and fast absorption. This serum is a quicker approach to achieve a radiant, brighter & younger healthy-looking skin. Formulated with 3 powerful blends of antioxidants: Vitamin C, Vitamin E and Ferulic Acid ensure total protection against photoaging (results from oxidative stress).</p>
+        <p class="price">RM78.00</p>
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div> 
+
+    <!-- Retinol 0.3% Serum -->
+    <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="serum6.jpg" alt="Retinol 0.3% Serum" class="product-img">
+      <div class="product-details">
+        <h2>Retinol 0.3% Serum</h2>
+        <p>Retinol 0.3% is a potent active that helps reduce fine lines and wrinkles by renewing skin cells. Enriched with Arginine and Polypeptide, it boosts collagen matrix production, resulting in firmer and smoother skin. This formula aims to restore youthfulness, leaving your skin revitalized. Helps smooth fine lines and wrinkles. Improves skin texture and radiance.</p>
+        <p class="price">RM89.00</p>
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div>               
+
+  </section>
+
+  <footer>
+    <p><a href="tel:+60178764932">📞 Contact Us: +6017-8764932</a></p>
+    <p><a href="about.html">👤 About Us</a></p>
+    <div class="social-icons" style="margin: 10px 0;">
+      <a href="https://www.instagram.com/theraw.skin?igsh=MW5lYWtkbmx5MXBpeA==" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@theraw.official?_t=ZS-8xy87hPNkL1&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+    <p><strong>The Raw. Proud Malaysian Brand.</strong></p>
+  </footer>
+</body>
+</html>

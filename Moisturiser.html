@@ -88,18 +88,31 @@
       gap: 20px;
     }
 
-    .header-icons {
-      display: flex;
-      gap: 20px;
+    .product-card {
+      max-width: 300px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .header-icons a {
-      color: #000;
-      font-size: 18px;
-      text-decoration: none;
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
-    
-    /* Product Section */
+
+    .product-img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .product-img:hover {
+      transform: scale(1.05);
+    }
+
     .product-section {
       display: flex;
       justify-content: center;
@@ -109,23 +122,20 @@
       flex-wrap: wrap;
     }
 
-    .product-details {
-      max-width: 400px;
-    }
-
     .product-details h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 28px;
+      font-size: 22px;
       color: #c2185b;
+      margin-top: 15px;
     }
 
     .product-details p {
       line-height: 1.6;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
 
     .price {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: bold;
       color: #558b2f;
     }
@@ -146,7 +156,6 @@
       transform: scale(1.05);
     }
 
-    /* Footer */
     footer {
       background-color: #ffd9e6;
       text-align: center;
@@ -176,22 +185,25 @@
         margin-top: 10px;
       }
 
-      .product-section {
+      .banner {
         flex-direction: column;
         text-align: center;
       }
 
-      .product-img {
-        width: 100%;
-        max-width: 250px;
+      .banner-text, .banner-img {
+        max-width: 100%;
       }
-    }
+
+      .fancy-text {
+        font-size: 50px;
+      }
+
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
+  <!-- Header Navigation -->
+    <header>
   <div class="logo"><a href="index.html">The Raw.</a></div>
   <nav class="main-nav">
     <div class="dropdown">
@@ -225,35 +237,35 @@
   <!-- Product Section -->
   <section class="product-section">
 
-    <!-- Hydrating Ceramide Cleanser -->
+    <!-- Ceramide Gel Moisturiser -->
     <div class="product-card" data-aos="zoom-in" data-aos-delay="0">
-      <img src="cleanser.jpg" alt="Hydrating Ceramide Cleanser" class="product-img">
+      <img src="moisturiser1.jpg" alt="Ceramide Gel Moisturiser" class="product-img">
       <div class="product-details">
-        <h2>Hydrating Ceramide Cleanser</h2>
-        <p>A soothing formula designed to restore your skin’s natural barrier while delivering intense hydration. Enriched with essential ceramides and hyaluronic acid, this non-stripping cleanser removes dirt and oil without drying your skin.</p>
-        <p class="price">RM39.00</p>
+        <h2>Ceramide Gel Moisturiser</h2>
+        <p>Lightweight gel formula perfect for oily and combination skin. Packed with ceramides and niacinamide to hydrate, calm, and control shine without clogging pores.</p>
+        <p class="price">RM48.00</p>
         <button class="buy-btn">Add to Cart</button>
       </div>
     </div>
 
-    <!-- Rough & Bumpy Ceramide Cleanser -->
+    <!-- Daily Ceramide Moisturiser -->
     <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
-      <img src="cleanser1.jpg" alt="Rough & Bumpy Ceramide Cleanser" class="product-img">
+      <img src="moisturiser2.jpg" alt="Daily Ceramide Moisturiser" class="product-img">
       <div class="product-details">
-        <h2>Rough & Bumpy Ceramide Cleanser</h2>
-        <p>This gentle cleanser targets rough and bumpy skin texture. With ceramides and exfoliating ingredients, it smooths the skin while preserving hydration and reducing flakiness.</p>
-        <p class="price">RM42.00</p>
+        <h2>Daily Ceramide Moisturiser</h2>
+        <p>Everyday hydration for normal to dry skin. Strengthens skin barrier with ceramides and hyaluronic acid for all-day comfort and smoothness.</p>
+        <p class="price">RM52.00</p>
         <button class="buy-btn">Add to Cart</button>
       </div>
     </div>
 
-    <!-- Acne Ceramide Cleanser -->
+    <!-- Daily Ceramides Cream -->
     <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
-      <img src="cleanser2.jpg" alt="Acne Ceramide Cleanser" class="product-img">
+      <img src="moisturiser3.jpg" alt="Daily Ceramides Cream" class="product-img">
       <div class="product-details">
-        <h2>Acne Ceramide Cleanser</h2>
-        <p>A clarifying formula made for acne-prone skin. Infused with salicylic acid and ceramides, it clears clogged pores, reduces breakouts, and calms inflammation without stripping your skin.</p>
-        <p class="price">RM45.00</p>
+        <h2>Daily Ceramides Cream</h2>
+        <p>Rich cream formula ideal for sensitive and damaged skin. Helps lock in moisture and repair barrier damage overnight.</p>
+        <p class="price">RM55.00</p>
         <button class="buy-btn">Add to Cart</button>
       </div>
     </div>
@@ -273,7 +285,8 @@
     <p><strong>The Raw. Proud Malaysian Brand.</strong></p>
   </div>
 </footer>
-  <!-- AOS Animation Init -->
+
+  <!-- AOS Animation Script -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({
@@ -284,3 +297,4 @@
 
 </body>
 </html>
+
